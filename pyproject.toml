@@ -33,6 +33,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Programming Language :: Python",
 ]
+keywords = ["package", "setuptools"]
 dependencies = ["requests"]
 [project.optional-dependencies]
 dev = ["pytest==5.0.0", "pytest-cov[all]", "mypy==0.910", "black==21.10b0"]
