@@ -82,3 +82,10 @@ setup()
 - PEP 621 https://peps.python.org/pep-0621/
   - setuptools support (wip) https://github.com/pypa/setuptools/issues/1688
   - experimental release https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/13821
+
+#### linter support for pyproject.toml (PEP518)
+- black (supported)
+- isort (supported)
+- flake8 https://github.com/PyCQA/flake8/issues/234
+  - pyproject-flake8 https://github.com/csachs/pyproject-flake8
+- mypy https://github.com/python/mypy/issues/5205
