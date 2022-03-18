@@ -1,4 +1,5 @@
 # py-tiny-pkg
+[![build](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yaml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yaml)
 - a tiny packaging example that only have a pyproject.toml w/setuptools
 
 ### motivation
