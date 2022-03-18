@@ -1,6 +1,5 @@
 # py-tiny-pkg
-- a tiny packaging example w/ setuptools + pyproject.toml
-  - wo/ setup.cfg, setup.py
+- a tiny packaging example that only have a pyproject.toml w/setuptools
 
 ### motivation
 - we can find lots of packaging examples with `poetry`, `pdm`, etc., but hard to find examples with the standard `setuptools` based on the latest PEP supports.
