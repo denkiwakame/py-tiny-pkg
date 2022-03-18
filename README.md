@@ -1,5 +1,6 @@
 # py-tiny-pkg
-[![build](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yaml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yaml)
+[![package](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yml)
+
 - a tiny packaging example that only have a pyproject.toml w/setuptools
 
 ### motivation
@@ -57,17 +58,19 @@ Requires: requests
 ERROR: Project file:///../tiny-py-pkg has a 'pyproject.toml' and its build backend is missing the 'build_editable' hook. Since it does not have a 'setup.py' nor a 'setup.cfg', it cannot be installed in editable mode. Consider using a build backend that supports PEP 660.
 ```
 
-- workaround: **locate `setup.py` that contains the following lines:**
-  - `$ pip install -e .`
-- in near future, editable install will work on projets that only have a `pyproject.toml`
-  - PEP660 https://peps.python.org/pep-0660/
-  - pip 21.1+ supports `build_editable` hook https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/#editable-installation
-  - setuptools support (wip) https://github.com/pypa/setuptools/issues/2816
+- workaround: **locate `setup.py` that contains the following lines:** and then `$ pip install -e .`
 
 ```python
 from setuptools import setup
 setup()
 ```
+
+- in near future, editable install will work on projets that only have a `pyproject.toml`
+  - PEP660 https://peps.python.org/pep-0660/
+  - pip 21.1+ supports `build_editable` hook https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/#editable-installation
+  - setuptools support (wip) https://github.com/pypa/setuptools/issues/2816
+
+
 
 ### Refernces
 #### pyproject.toml
