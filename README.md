@@ -2,12 +2,15 @@
 [![test](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml)
 
 - a tiny packaging example that only have a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
+- **NOTE:** this repository uses [experimental release of setuptools](https://github.com/pypa/setuptools/issues/1688)
+  - will be replaced with an official release version in future
 
 ### 🦾 motivation
 - we can find lots of packaging examples with `poetry`, `pdm`, etc., but hard to find examples with the standard `setuptools` based on the latest PEP supports.
 
 ### ✔️ confirmed versions
-- `python 3.9.11+`
+- `Ubuntu 20.04` `Mac OS X 11.6.4`
+- `python 3.7.*, 3.8.*, 3.9.*`
 - `pip 22.0.4+`
 
 ### ⬇️ install locally
