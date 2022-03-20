@@ -43,10 +43,10 @@ dependencies = ["requests"]
 [project.optional-dependencies]
 dev = ["pytest==5.0.0", "pytest-cov[all]", "mypy==0.910", "black==21.10b0"]
 [project.urls]
-homepage = "github.com/denkiwakame/tiny-pkg"
-documentation = "github.com/denkiwakame/tiny-pkg"
+homepage = "github.com/denkiwakame/py-tiny-pkg"
+documentation = "github.com/denkiwakame/py-tiny-pkg"
 repository = "github.com"
-changelog = "github.com/denkiwakame/tiny-pkg/blob/main/CHANGELOG.md"
+changelog = "github.com/denkiwakame/py-tiny-pkg/blob/main/CHANGELOG.md"
 
 [tool.black]
 target-version = ['py39']
