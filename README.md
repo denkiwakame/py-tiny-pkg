@@ -1,5 +1,5 @@
 # 📦 py-tiny-pkg
-[![package](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/ci.yml)
+[![test](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml)
 
 - a tiny packaging example that only have a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
 
