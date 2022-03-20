@@ -1,5 +1,5 @@
 # Changelog
 
-## [0.0.1] - 2022-03-18
-- experimental release based on https://github.com/pypa/setuptools@experimental/support-pyproject
-
+## [0.0.1] - 2022-03-20
+- w/ setuptools experimental release https://github.com/pypa/setuptools@experimental/support-pyproject
+- publish to PyPI
