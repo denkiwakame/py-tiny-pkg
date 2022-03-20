@@ -24,7 +24,7 @@
 
 ```
 Name: tinypkg
-Version: 0.0.1
+Version: 0.0.0
 Summary: a tiny package example w/setuptools
 Home-page: github.com/denkiwakame/tiny-pkg
 Author: denkiwakame
