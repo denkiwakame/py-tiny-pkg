@@ -5,6 +5,8 @@
 # https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/13821
 requires = [
   "setuptools @ git+https://github.com/pypa/setuptools@experimental/support-pyproject",
+  "wheel",              # for bdist package distribution
+  "setuptools_scm>=6.4" # for automated versioning
 ]
 
 # PEP 517 https://peps.python.org/pep-0517/
@@ -19,10 +21,13 @@ where = ["tinypkg"]
 exclude = ["tests"]
 namespaces = true
 
+[tool.setuptools_scm]
+write_to = "tinypkg/_version.py"
+
 # PEP 621 https://peps.python.org/pep-0621/
 [project]
 name = "tinypkg"
-version = "0.0.1"
+# version = "0.0.1" automated versioning by pypa/setuptools_scm
 description = "a tiny package example w/setuptools"
 authors = [{ name = "denkiwakame" }, { email = "denkivvakame@gmail.com" }]
 maintainers = [{ name = "denkiwakame" }, { email = "denkivvakame@gmail.com" }]
@@ -38,10 +43,10 @@ dependencies = ["requests"]
 [project.optional-dependencies]
 dev = ["pytest==5.0.0", "pytest-cov[all]", "mypy==0.910", "black==21.10b0"]
 [project.urls]
-homepage = "github.com/denkiwakame/tiny-pkg"
-documentation = "github.com/denkiwakame/tiny-pkg"
-repository = "github.com"
-changelog = "github.com/denkiwakame/tiny-pkg/blob/main/CHANGELOG.md"
+homepage = "https://github.com/denkiwakame/py-tiny-pkg"
+documentation = "https://github.com/denkiwakame/py-tiny-pkg"
+repository = "https://github.com/denkiwakame/py-tiny-pkg"
+changelog = "https://github.com/denkiwakame/py-tiny-pkg/blob/main/CHANGELOG.md"
 
 [tool.black]
 target-version = ['py39']

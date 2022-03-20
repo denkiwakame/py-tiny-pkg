@@ -1,5 +1,7 @@
 # 📦 py-tiny-pkg
 [![test](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml)
+[![publish](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/pub.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/pub.yml)
+[![PyPI version](https://badge.fury.io/py/tinypkg.svg)](https://badge.fury.io/py/tinypkg)
 
 - a tiny packaging example that only have a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
 - **NOTE:** this repository uses [experimental release of setuptools](https://github.com/pypa/setuptools/issues/1688)
@@ -73,7 +75,9 @@ setup()
   - pip 21.1+ supports `build_editable` hook https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/#editable-installation
   - setuptools support (wip) https://github.com/pypa/setuptools/issues/2816
 
-
+### 📦 publish to PyPI
+- use [pypa/build](https://github.com/pypa/build), a simple PEP 517 frontend and [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish)
+  - https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
 
 ### 📚 Refernces
 #### pyproject.toml
@@ -89,9 +93,9 @@ setup()
   - setuptools support (wip) https://github.com/pypa/setuptools/issues/1688
   - experimental release https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/13821
 
-#### linter support for pyproject.toml (PEP518)
+#### linter support for pyproject.toml
 - black (supported)
 - isort (supported)
+- mypy (supported) https://github.com/python/mypy/issues/5205
 - flake8 https://github.com/PyCQA/flake8/issues/234
   - pyproject-flake8 https://github.com/csachs/pyproject-flake8
-- mypy https://github.com/python/mypy/issues/5205
