@@ -4,8 +4,8 @@
 [![PyPI version](https://badge.fury.io/py/tinypkg.svg)](https://badge.fury.io/py/tinypkg)
 
 - a tiny packaging example that only has a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
-- **NOTE:** this repository uses [experimental release of setuptools](https://github.com/pypa/setuptools/issues/1688)
-  - will be replaced with an official release version in future
+- 🎉 setuptools [v61.0.0](https://github.com/pypa/setuptools/releases/tag/v61.0.0) is released with experimental support for `pyproject.toml`
+  - see https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/13821/65
 
 ### 🦾 motivation
 - we can find lots of packaging examples with `poetry`, `pdm`, etc., but hard to find examples with the standard `setuptools` based on the latest PEP supports.
