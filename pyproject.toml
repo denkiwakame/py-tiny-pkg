@@ -43,7 +43,7 @@ dependencies = ["requests"]
 [project.optional-dependencies]
 dev = ["pytest==5.0.0", "pytest-cov[all]", "mypy==0.910", "black==21.10b0"]
 [project.urls]
-homepage = "https://github.com/denkiwakame/py-tiny-pkg"
+Homepage = "https://github.com/denkiwakame/py-tiny-pkg"
 documentation = "https://github.com/denkiwakame/py-tiny-pkg"
 repository = "https://github.com/denkiwakame/py-tiny-pkg"
 changelog = "https://github.com/denkiwakame/py-tiny-pkg/blob/main/CHANGELOG.md"
