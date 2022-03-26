@@ -73,6 +73,49 @@ setup()
   - pip 21.1+ supports `build_editable` hook https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/#editable-installation
   - setuptools support (wip) https://github.com/pypa/setuptools/issues/2816
 
+### ❓ How can I manage ext_modules ?
+- `pyproject.toml` does not strictly intend to replace `setup.py` .
+- If you need to build C/C++ extension modules w/[pybind11](https://github.com/pybind/pybind11) or something, write the following `setup.py` (dynamic config) alongside with the `pyproject.toml` (metadata file).
+
+```python
+import subprocess
+import os
+import sys
+
+from setuptools import Extension, setup
+from setuptools.command.build_ext import build_ext
+
+class CMakeExtension(Extension):
+    def __init__(self, name, sourcedir=""):
+        Extension.__init__(self, name, sources=[])
+        self.sourcedir = os.path.abspath(sourcedir)
+
+class CMakeBuild(build_ext):
+    def build_extension(self, ext):
+        cfg = "Debug" if self.debug else "Release"  # TODO
+        extdir = os.path.abspath(os.path.dirname(
+            self.get_ext_fullpath(ext.name)))
+        cmake_args = [
+            f"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY={extdir}",
+            f"-DPYTHON_EXECUTABLE={sys.executable}",
+            f"-DCMAKE_BUILD_TYPE={cfg}",
+        ]
+        build_args = []
+        if not os.path.exists(self.build_temp):
+            os.makedirs(self.build_temp)
+        subprocess.check_call(
+            ["cmake", ext.sourcedir] + cmake_args, cwd=self.build_temp
+        )
+        subprocess.check_call(
+            ["cmake", "--build", "."] + build_args, cwd=self.build_temp
+        )
+setup(
+    ext_modules=[CMakeExtension("bindings")],
+    cmdclass={"build_ext": CMakeBuild},
+)
+```
+
+
 ### 📦 publish to PyPI
 - use [pypa/build](https://github.com/pypa/build), a simple PEP 517 frontend and [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish)
   - https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
