@@ -4,7 +4,8 @@
 # PEP 518 https://www.python.org/dev/peps/pep-0518/
 # https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/13821
 requires = [
-  "setuptools>=61",
+#  "setuptools>=61",
+  "setuptools==61.0.0",
   "wheel",               # for bdist package distribution
   "setuptools_scm>=6.4", # for automated versioning
 ]
