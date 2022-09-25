@@ -18,7 +18,7 @@
 ### ⬇️ install locally
 - clone this repo
 - `$ pip install .` or `$ pip install .[dev]` (for testing)
-- `$ pip show tinypkg`
+- `$ pip show -f tinypkg`
 
 ```
 Name: tinypkg
