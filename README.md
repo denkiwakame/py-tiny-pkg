@@ -5,7 +5,8 @@
 
 - a tiny packaging example that only has a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
 - 🎉 setuptools [v61.0.0](https://github.com/pypa/setuptools/releases/tag/v61.0.0) is released with experimental support for `pyproject.toml`
-  - see https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/
+  - 📄 official documentation https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+  - 💬 discussions https://discuss.python.org/t/help-testing-experimental-features-in-setuptools/
 
 ### 🦾 motivation
 - we can find lots of packaging examples with `poetry`, `pdm`, etc., but hard to find examples with the standard `setuptools` based on the latest PEP supports.
