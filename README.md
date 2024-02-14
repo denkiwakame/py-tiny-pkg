@@ -2,6 +2,8 @@
 [![test](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/test.yml)
 [![publish](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/pub.yml/badge.svg)](https://github.com/denkiwakame/py-tiny-pkg/actions/workflows/pub.yml)
 [![PyPI version](https://badge.fury.io/py/tinypkg.svg)](https://badge.fury.io/py/tinypkg)
+[![license](https://img.shields.io/badge/LICENSE-DWTHYW-important.svg)](https://github.com/denkiwakame/py-tiny-pkg/blob/main/LICENSE)
+
 
 - a tiny packaging example that only has a [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) w/[setuptools 🔨](https://github.com/pypa/setuptools)
 - 🎉 setuptools [v61.0.0](https://github.com/pypa/setuptools/releases/tag/v61.0.0) is released with experimental support for `pyproject.toml`
