@@ -140,6 +140,18 @@ setup(
   - setuptools support https://setuptools.pypa.io/en/latest/build_meta.html
 - 📑 PEP 518 https://www.python.org/dev/peps/pep-0518/
 
+##### (FYI) Commonly Used `build-backend` Options
+
+| **Backend**              | **Specification**                    | **Features**                                                                             | **Recommended Use Cases**                         |
+|--------------------------|---------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------|
+| **`setuptools`**         | `setuptools.build_meta`              | Stable and widely used. Often the default choice for many projects.                     | Legacy projects or when minimal dependency management is needed. |
+| **`hatchling`**          | `hatchling.build`                    | Lightweight and fast. Modern design with simple dependency management.                   | New projects where simplicity and speed are prioritized.         |
+| **`poetry-core`**        | `poetry.core.masonry.api`            | Simplified version of `poetry`. Excellent for strict dependency management.              | Projects requiring robust dependency management.                 |
+| **`flit`**               | `flit_core.buildapi`                 | Designed for simple package structures. Very lightweight and easy to use.                | Ideal for small libraries or script distribution.                |
+| **`pdm-backend`**        | `pdm.backend`                        | Modern and fully compatible with `pyproject.toml`. Advanced dependency resolution.       | Flexible for a wide range of project types.                      |
+
+
+
 #### metadata
 - 📑 PEP 621 https://peps.python.org/pep-0621/
   - setuptools support (wip) https://github.com/pypa/setuptools/issues/1688
